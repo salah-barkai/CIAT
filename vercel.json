@@ -1,16 +1,20 @@
 {
   "version": 2,
-  "buildCommand": "npm run build --prefix client",
-  "outputDirectory": "client/dist",
-  "functions": {
-    "api/index.js": {
-      "memory": 1024,
-      "maxDuration": 60,
-      "includeFiles": "server/**"
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["server/**"] }
     }
-  },
-  "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/index" },
-    { "source": "/(.*)",        "destination": "/index.html" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.js" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
