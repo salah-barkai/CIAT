@@ -45,7 +45,11 @@ if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === 'METS_TA
 /* ── Chargement des données CIAT ── */
 let knowledge = {};
 try {
-  knowledge = JSON.parse(readFileSync(join(__dirname, 'ciat-knowledge.json'), 'utf-8'));
+  /* Sur Vercel (bundle esbuild), import.meta.url pointe vers le bundle — on utilise process.cwd() */
+  const knowledgePath = process.env.VERCEL
+    ? join(process.cwd(), 'server', 'ciat-knowledge.json')
+    : join(__dirname, 'ciat-knowledge.json');
+  knowledge = JSON.parse(readFileSync(knowledgePath, 'utf-8'));
   console.log('✅ Base de connaissances CIAT chargée');
 } catch {
   console.warn('⚠️  ciat-knowledge.json introuvable, NIA fonctionnera sans données CIAT');
@@ -488,6 +492,13 @@ app.get('/api/health', async (_req, res) => {
     database: dbStatus,
   });
 });
+
+/* ── Sur Vercel : Express sert aussi le frontend React ── */
+if (process.env.VERCEL) {
+  const clientDist = join(process.cwd(), 'client', 'dist');
+  app.use(express.static(clientDist));
+  app.get('*', (_req, res) => res.sendFile(join(clientDist, 'index.html')));
+}
 
 /* ── Export pour Vercel serverless ── */
 export default app;
