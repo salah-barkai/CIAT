@@ -1,0 +1,15 @@
+{
+  "name": "ciat-website",
+  "version": "1.0.0",
+  "description": "CIAT - Communauté d'Intelligence Artificielle au Tchad",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "organisation": {
+    "nom": "CIAT — Communauté d'Intelligence Artificielle au Tchad",
+    "acronyme": "CIAT",
+    "type": "Association à but non lucratif",
+    "pays": "Tchad",
+    "ville": "N'Djamena",
+    "email": "contact@ciat-tchad.org",
+    "annee_creation": 2025,
+    "mission": "Démocratiser l'accès à l'intelligence artificielle au Tchad et en Afrique centrale, en rassemblant les passionnés, développeurs, chercheurs et entrepreneurs autour de projets concrets à impact local.",
+    "vision": "Faire du Tchad un acteur incontournable de l'écosystème IA africain d'ici 2030.",
+    "slogan": "L'IA au service du Tchad",
+    "description": "La CIAT est une communauté fondée par des jeunes tchadiens passionnés par la technologie et l'intelligence artificielle. Elle organise des ateliers, hackathons, formations et projets pour permettre à tous les Tchadiens de comprendre et d'utiliser l'IA au quotidien.",
+    "langues": ["Français", "Arabe", "Anglais"],
+    "reseaux_sociaux": {
+      "facebook": "CIAT Tchad",
+      "twitter": "@CIATTchad",
+      "linkedin": "CIAT Tchad",
+      "instagram": "@ciat_tchad"
+    }
+  },
+
+  "valeurs": [
+    {
+      "titre": "Accessibilité",
+      "description": "Rendre l'IA compréhensible et utilisable par tous, quel que soit le niveau d'études ou le parcours, en proposant des formations adaptées au contexte tchadien."
+    },
+    {
+      "titre": "Innovation locale",
+      "description": "Encourager des solutions IA pensées et conçues en Afrique, pour résoudre les vrais problèmes africains : agriculture, santé, éducation, énergie."
+    },
+    {
+      "titre": "Communauté",
+      "description": "Construire un réseau solide et solidaire de talents tech au Tchad, où chacun peut apprendre, partager et grandir ensemble."
+    },
+    {
+      "titre": "Impact",
+      "description": "Utiliser l'IA pour améliorer concrètement la vie des citoyens tchadiens et contribuer au développement durable du pays."
+    }
+  ],
+
+  "bureau_executif": [
+    {
+      "numero": 1,
+      "poste": "Président",
+      "nom": "Kally Hassan Mahat",
+      "age": 26,
+      "profession": "Comptable",
+      "domicile": "Farcha, N'Djamena",
+      "telephone": "66038443",
+      "role_ciat": "Il assure la présidence, la vision stratégique et la représentation officielle de la CIAT auprès des partenaires et institutions."
+    },
+    {
+      "numero": 2,
+      "poste": "Secrétaire Général (SG)",
+      "nom": "Abbas Adam Abbas",
+      "age": 28,
+      "profession": "Ingénieur",
+      "domicile": "N'Djamena",
+      "telephone": "66010078",
+      "role_ciat": "Coordonne les activités administratives, rédige les procès-verbaux, gère les correspondances officielles et assure le bon fonctionnement de l'organisation."
+    },
+    {
+      "numero": 3,
+      "poste": "Trésorière Générale",
+      "nom": "Bilong Brenda",
+      "age": 25,
+      "profession": "Manager",
+      "domicile": "N'Djamena",
+      "telephone": "65387931",
+      "role_ciat": "Responsable de la gestion financière, budgétaire et comptable de la CIAT, assure la transparence et la bonne utilisation des ressources."
+    },
+    {
+      "numero": 4,
+      "poste": "Chargé des Projets et Programmes",
+      "nom": "FAT-HI Mahadi Mahamat",
+      "age": 27,
+      "profession": "Ingénieur",
+      "domicile": "N'Djamena",
+      "telephone": "65261619",
+      "role_ciat": "Pilote les projets technologiques et les programmes de la CIAT, assure le suivi et l'évaluation des initiatives lancées par la communauté."
+    },
+    {
+      "numero": 5,
+      "poste": "Chargé de Communication",
+      "nom": "Mbaillassem Séverin",
+      "age": 26,
+      "profession": "Community Manager",
+      "domicile": "N'Djamena",
+      "telephone": "69564073",
+      "role_ciat": "Gère la communication interne et externe, anime les réseaux sociaux, crée du contenu et renforce la visibilité de la CIAT."
+    },
+    {
+      "numero": 6,
+      "poste": "Chargé de Formation et IA",
+      "nom": "Tahir Ergoulet",
+      "age": 29,
+      "profession": "Ingénieur",
+      "domicile": "N'Djamena",
+      "telephone": "66202282",
+      "role_ciat": "Conçoit et anime les programmes de formation en IA, organise les ateliers techniques et veille à la montée en compétences des membres."
+    }
+  ],
+
+  "statistiques": {
+    "membres": 25,
+    "evenements_organises": 5,
+    "projets_actifs": 12,
+    "villes_couvertes": 1,
+    "ville_principale": "N'Djamena"
+  },
+
+  "evenements": {
+    "a_venir": [
+      {
+        "date": "15 Juillet 2026",
+        "titre": "Atelier de sensibilisation sur l'IA",
+        "description": "Sensibilisation des membres de la CIAT aux fondamentaux de l'intelligence artificielle : enjeux, opportunités et applications concrètes en Afrique. Séance interactive avec démonstrations pratiques.",
+        "type": "Atelier",
+        "lieu": "N'Djamena",
+        "public_cible": "Membres CIAT, curieux, étudiants",
+        "inscription": "Via le formulaire de contact sur le site"
+      },
+      {
+        "date": "22 Juillet 2026",
+        "titre": "Accompagnement projet Santé",
+        "description": "Accompagnement et suivi d'un projet innovant utilisant l'IA pour améliorer l'accès aux soins et le diagnostic médical au Tchad. Présentation des avancées et session de mentoring.",
+        "type": "Projet",
+        "lieu": "N'Djamena",
+        "public_cible": "Membres CIAT, professionnels de santé, développeurs",
+        "inscription": "Via le formulaire de contact sur le site"
+      },
+      {
+        "date": "5 Août 2026",
+        "titre": "Déploiement officiel du chatbot CIAT",
+        "description": "Mise en production officielle du chatbot IA de la CIAT sur le site web de la communauté. Première démonstration publique d'un assistant IA propulsé par Claude d'Anthropic au Tchad.",
+        "type": "Lancement",
+        "lieu": "N'Djamena",
+        "public_cible": "Grand public, membres, partenaires, médias",
+        "inscription": "Via le formulaire de contact sur le site"
+      }
+    ],
+    "passes": [
+      {
+        "titre": "Session découverte de l'IA",
+        "description": "Première rencontre officielle de la CIAT avec une introduction aux concepts de base de l'IA.",
+        "type": "Atelier"
+      },
+      {
+        "titre": "Réunion constitutive du bureau",
+        "description": "Élection et mise en place du bureau exécutif de la CIAT.",
+        "type": "Assemblée"
+      }
+    ]
+  },
+
+  "projets": [
+    {
+      "titre": "Chatbot CIAT",
+      "description": "Développement et déploiement d'un assistant IA conversationnel sur le site web de la CIAT, propulsé par Claude d'Anthropic. Premier chatbot IA officiel d'une communauté tech au Tchad.",
+      "statut": "En cours",
+      "technologie": "Claude API (Anthropic), React, Node.js"
+    },
+    {
+      "titre": "IA & Santé Tchad",
+      "description": "Projet d'utilisation de l'IA pour améliorer le diagnostic médical et l'accès aux soins dans les zones éloignées du Tchad.",
+      "statut": "En accompagnement",
+      "domaine": "Santé"
+    },
+    {
+      "titre": "Site Web CIAT",
+      "description": "Conception et développement du site vitrine officiel de la CIAT avec chatbot intégré, bilingue français/anglais.",
+      "statut": "Déployé",
+      "technologie": "React, Vite, Node.js, Express"
+    }
+  ],
+
+  "adhesion": {
+    "comment_rejoindre": "Pour rejoindre la CIAT, envoyez un message via le formulaire de contact sur le site web ou contactez directement un membre du bureau exécutif.",
+    "conditions": "La CIAT est ouverte à toute personne intéressée par l'intelligence artificielle, quel que soit son niveau technique. Étudiants, professionnels, chercheurs, curieux — tout le monde est le bienvenu.",
+    "avantages": [
+      "Accès aux ateliers et formations en IA",
+      "Participation aux projets communautaires",
+      "Réseau professionnel tech au Tchad",
+      "Accès aux ressources pédagogiques partagées",
+      "Opportunités de collaboration sur des projets innovants",
+      "Newsletter et actualités IA"
+    ],
+    "cotisation": "La cotisation est symbolique et accessible à tous. Contactez le bureau pour plus d'informations."
+  },
+
+  "faq": [
+    {
+      "question": "Qu'est-ce que la CIAT ?",
+      "reponse": "La CIAT (Communauté d'Intelligence Artificielle au Tchad) est une association à but non lucratif fondée à N'Djamena. Elle rassemble des passionnés d'IA pour développer l'écosystème technologique au Tchad à travers des formations, projets et événements."
+    },
+    {
+      "question": "Comment rejoindre la CIAT ?",
+      "reponse": "C'est simple ! Remplissez le formulaire de contact sur notre site web ou contactez un membre du bureau. La communauté est ouverte à tous, débutants comme experts."
+    },
+    {
+      "question": "Faut-il être expert en IA pour rejoindre ?",
+      "reponse": "Absolument pas ! La CIAT accueille tout le monde : étudiants, professionnels, entrepreneurs, enseignants ou simples curieux. Nous proposons des formations adaptées à tous les niveaux."
+    },
+    {
+      "question": "Quels types d'activités organise la CIAT ?",
+      "reponse": "Nous organisons des ateliers de formation, des hackathons, des conférences, des sessions de mentoring sur des projets IA, et des démonstrations de technologies. Consultez notre section Événements pour le programme à venir."
+    },
+    {
+      "question": "La CIAT propose-t-elle des formations en IA ?",
+      "reponse": "Oui ! Notre Chargé de Formation et IA, Tahir Ergoulet, conçoit des programmes adaptés au contexte tchadien. Nous couvrons le Machine Learning, le NLP, la vision par ordinateur, et les applications pratiques de l'IA."
+    },
+    {
+      "question": "Comment contacter la CIAT ?",
+      "reponse": "Vous pouvez nous contacter par email à contact@ciat-tchad.org, via le formulaire sur notre site, ou directement sur nos réseaux sociaux (Facebook, Twitter, LinkedIn, Instagram)."
+    },
+    {
+      "question": "Où se trouve la CIAT ?",
+      "reponse": "La CIAT est basée à N'Djamena, la capitale du Tchad. Nos événements se tiennent principalement à N'Djamena, avec des perspectives d'expansion dans d'autres villes du pays."
+    },
+    {
+      "question": "Qu'est-ce que l'intelligence artificielle ?",
+      "reponse": "L'intelligence artificielle (IA) est un ensemble de technologies permettant aux machines d'apprendre, de raisonner et de résoudre des problèmes. Ses applications touchent la santé, l'agriculture, l'éducation, la finance et bien d'autres domaines — autant de secteurs clés pour le développement du Tchad."
+    },
+    {
+      "question": "La CIAT a-t-elle des partenaires ?",
+      "reponse": "La CIAT est en cours de développement de partenariats avec des universités, entreprises tech et organisations internationales. Si vous souhaitez devenir partenaire, contactez notre bureau via le formulaire de contact."
+    },
+    {
+      "question": "Comment participer aux événements ?",
+      "reponse": "Cliquez sur le bouton 'S'inscrire' à côté de l'événement qui vous intéresse sur notre site. Vous serez redirigé vers le formulaire de contact où vous pouvez préciser l'événement auquel vous souhaitez participer."
+    },
+    {
+      "question": "Qui est le président de la CIAT ?",
+      "reponse": "Le président de la CIAT est Kally Hassan Mahat, 26 ans, comptable de profession, basé à Farcha (N'Djamena). Il assure la vision stratégique et la représentation officielle de la communauté."
+    },
+    {
+      "question": "Combien de membres compte la CIAT ?",
+      "reponse": "La CIAT compte actuellement 25 membres actifs, tous basés à N'Djamena. Notre communauté grandit progressivement et nous accueillons régulièrement de nouveaux membres passionnés par l'IA."
+    }
+  ],
+
+  "ressources_ia": [
+    {
+      "titre": "Débuter en IA",
+      "description": "Pour commencer en IA, nous recommandons de démarrer par les mathématiques de base (algèbre linéaire, statistiques), puis d'apprendre Python, avant d'explorer des bibliothèques comme scikit-learn, TensorFlow ou PyTorch.",
+      "niveau": "Débutant"
+    },
+    {
+      "titre": "Machine Learning",
+      "description": "Le Machine Learning est une branche de l'IA où les algorithmes apprennent à partir de données. Les concepts clés : régression, classification, clustering, arbres de décision, réseaux de neurones.",
+      "niveau": "Intermédiaire"
+    },
+    {
+      "titre": "IA en Afrique",
+      "description": "L'Afrique dispose d'un énorme potentiel pour l'IA : données agricoles, médicales, linguistiques uniques. Des organisations comme Deep Learning Indaba, AI4D et Masakhane travaillent à développer l'IA centrée sur l'Afrique.",
+      "niveau": "Tous niveaux"
+    },
+    {
+      "titre": "Outils IA gratuits",
+      "description": "Plusieurs outils IA sont accessibles gratuitement : Google Colab pour coder, Hugging Face pour les modèles de langage, Kaggle pour les datasets et les compétitions, Fast.ai pour apprendre le deep learning.",
+      "niveau": "Tous niveaux"
+    }
+  ],
+
+  "contact": {
+    "email_principal": "contact@ciat-tchad.org",
+    "adresse": "N'Djamena, Tchad",
+    "formulaire": "Disponible sur le site officiel de la CIAT, section 'Contact'",
+    "urgence": "Pour toute demande urgente, contactez directement le Secrétaire Général : Abbas Adam Abbas au 66010078"
+  },
+
+  "salutations": {
+    "description": "Salutations et expressions de politesse dans les langues parlées au Tchad",
+    "arabe_tchadien": {
+      "langue": "Arabe tchadien — langue la plus parlée au Tchad",
+      "bonjour": "Salaam alaykoum",
+      "reponse_bonjour": "Wa alaykoum salam",
+      "bonjour_matin": "Sabah el kheir",
+      "reponse_matin": "Sabah el nour",
+      "bonsoir": "Msa el kheir",
+      "comment_ca_va": "Kaif halak ? (homme) / Kaif halik ? (femme)",
+      "ca_va_bien": "Tamam / Labass",
+      "merci": "Shukran",
+      "de_rien": "Afwan",
+      "au_revoir": "Maasalama / Fi aman Allah",
+      "bienvenue": "Ahlan wa sahlan",
+      "expressions_courantes": [
+        "Inshallah — Si Dieu le veut (très utilisé au quotidien)",
+        "Hamdulillah — Dieu merci / Je vais bien",
+        "Yallah — Allez / Allons-y",
+        "Mashallah — Quelle merveille (admiration)",
+        "Bismillah — Au nom de Dieu (avant de commencer quelque chose)"
+      ]
+    },
+    "francais_tchadien": {
+      "langue": "Français tchadien — langue officielle avec ses propres saveurs locales",
+      "expressions": [
+        { "expression": "On est ensemble", "signification": "Expression de solidarité, d'accord et d'unité" },
+        { "expression": "C'est comment ?", "signification": "Comment ça va ? Comment c'est ?" },
+        { "expression": "Ça bouge ?", "signification": "Comment tu vas ? (très informel, jeunes)" },
+        { "expression": "Mon frère / Ma sœur", "signification": "Terme affectueux entre Tchadiens, signe de fraternité" },
+        { "expression": "Patron / Patronne", "signification": "Terme de respect pour quelqu'un de plus âgé ou en position" },
+        { "expression": "C'est bon là", "signification": "C'est bien, c'est acceptable, on est d'accord" },
+        { "expression": "Tu mens pas", "signification": "Tu as raison, je suis d'accord, vraiment !" },
+        { "expression": "Laisse tomber", "signification": "N'y pense plus / Ce n'est pas grave" },
+        { "expression": "On gère", "signification": "On s'en occupe, ça va aller" },
+        { "expression": "C'est chaud", "signification": "C'est difficile / C'est compliqué" }
+      ]
+    },
+    "sara": {
+      "langue": "Sara — principale langue du sud du Tchad",
+      "bonjour": "Mbay (salut informel)",
+      "merci": "Ufoo / Naa kul",
+      "note": "Le sara regroupe plusieurs dialectes : Ngambaye, Mbaye, Gor, etc."
+    },
+    "comment_saluer_nia": [
+      "Tu peux me saluer en français, en arabe tchadien ou en anglais — je comprends tout !",
+      "Si tu dis 'Salaam' ou 'Labass' je réponds en arabe tchadien avec plaisir",
+      "Si tu commences en sara je ferai de mon mieux pour comprendre le contexte"
+    ]
+  },
+
+  "culture_tchadienne": {
+    "description": "Éléments culturels essentiels du Tchad pour une meilleure connexion avec les utilisateurs",
+    "valeurs_sociales": [
+      "L'hospitalité (difaa en arabe) — recevoir l'hôte avec générosité est une obligation morale",
+      "Le respect des anciens — fondamental dans toutes les communautés tchadiennes",
+      "La solidarité communautaire — 'On est ensemble' n'est pas qu'une expression, c'est un mode de vie",
+      "La famille élargie — les liens familiaux dépassent le cercle nucléaire",
+      "La palabre — tradition de résolution des conflits par le dialogue collectif"
+    ],
+    "the_tchadien": {
+      "importance": "Le thé (shaï) est un rituel social majeur au Tchad",
+      "ritual": "Servi en 3 verres : le 1er amer comme la mort, le 2e sucré comme la vie, le 3e doux comme l'amour",
+      "signification": "Partager le thé = créer un lien, sceller une amitié, une confiance"
+    },
+    "cuisine": [
+      { "nom": "Boule de mil", "description": "Plat de base national, boule de farine de mil ou sorgho servie avec sauces variées" },
+      { "nom": "Daraba", "description": "Sauce épaisse à base de gombo, très populaire et nourrissante" },
+      { "nom": "Kisser", "description": "Galette fermentée à base de sorgho, accompagnement courant" },
+      { "nom": "Mouton/bœuf grillé", "description": "Incontournable lors des fêtes, célébrations et réunions importantes" },
+      { "nom": "Jarret de bœuf (N'Djamena)", "description": "Plat festif très apprécié dans la capitale" },
+      { "nom": "Alyam alyam", "description": "Plat de riz épicé, très populaire en ville" }
+    ],
+    "fetes_et_celebrations": [
+      "Aïd el-Fitr (Korité) — fin du Ramadan, fête nationale majeure, 3 jours de célébrations",
+      "Aïd el-Adha (Tabaski) — sacrifice du mouton, retrouvailles familiales",
+      "Fête nationale : 11 août 1960 — indépendance du Tchad de la France",
+      "Fête de la Liberté : 1er décembre",
+      "Noël et Pâques — célébrés par la communauté chrétienne principalement au sud",
+      "Mawlid — naissance du Prophète Muhammad, célébrée avec chants religieux"
+    ],
+    "proverbes_tchadiens": [
+      { "proverbe": "Un seul doigt ne peut ramasser une pierre", "leçon": "La force est dans l'union et la collaboration" },
+      { "proverbe": "L'étranger ne connaît pas où le bât blesse", "leçon": "Respect de la culture locale et humilité" },
+      { "proverbe": "Mieux vaut un bon voisin qu'un frère lointain", "leçon": "Importance de la communauté de proximité" },
+      { "proverbe": "La parole est d'argent, le silence est d'or", "leçon": "Sagesse dans la prise de parole" },
+      { "proverbe": "Celui qui apprend et n'enseigne pas est comme un arbre sans fruits", "leçon": "Partager le savoir est un devoir" }
+    ],
+    "n_djamena": {
+      "surnom": "La capitale au bord du Chari",
+      "description": "N'Djamena est une ville vibrante au confluent du Chari et du Logone, à la frontière avec le Cameroun",
+      "quartiers_connus": ["Farcha", "Chagoua", "Moursal", "Klemat", "Paris-Congo", "Ardep-Djoumal"],
+      "lieux_importants": ["Marché central", "Grand Mosquée", "Palais présidentiel", "Université de N'Djamena", "Musée national du Tchad"]
+    }
+  },
+
+  "personnalite_nia": {
+    "qui_est_nia": "NIA est l'IA de la CIAT — pas juste un chatbot, mais une vraie compagne intellectuelle tchadienne. Elle combine la chaleur humaine africaine avec la puissance d'une IA moderne.",
+    "traits_de_caractere": [
+      "Chaleureuse et accueillante — comme une amie tchadienne qui t'accueille avec le sourire et le thé",
+      "Directe et honnête — elle dit les choses clairement, sans détour inutile",
+      "Curieuse et enthousiaste — elle adore explorer de nouvelles idées et partager des découvertes",
+      "Fière de l'Afrique — elle valorise le potentiel africain et tchadien à chaque occasion",
+      "Humble et transparente — quand elle ne sait pas, elle le dit sans honte",
+      "Encourageante — elle croit en le potentiel de chaque personne qui lui parle",
+      "Drôle et légère — elle sait plaisanter et ne se prend pas trop au sérieux",
+      "Profonde et réfléchie — elle peut aller au fond des sujets complexes avec clarté"
+    ],
+    "style_communication": [
+      "Tutoie naturellement comme entre amis — jamais de 'vous' formel sauf si la personne l'utilise",
+      "Utilise des expressions tchadiennes comme 'On est ensemble', 'Inshallah', 'C'est chaud' quand approprié",
+      "Explique les concepts complexes avec des exemples concrets et des analogies africaines",
+      "Structure ses réponses clairement avec des étapes ou des listes quand c'est utile",
+      "Pose des questions de suivi pour vraiment comprendre le besoin",
+      "Célèbre les succès et encourage les projets avec sincérité",
+      "Adapte son niveau de langage selon l'interlocuteur (débutant ou expert)",
+      "Répond TOUJOURS dans la langue que l'utilisateur a utilisée"
+    ],
+    "comment_nia_pense": [
+      "Elle analyse d'abord la question en profondeur avant de répondre",
+      "Elle donne des réponses complètes et nuancées, pas juste des réponses superficielles",
+      "Elle fait des connexions entre différents domaines pour enrichir ses réponses",
+      "Elle propose toujours une perspective africaine/tchadienne quand c'est pertinent",
+      "Elle est capable de débattre, de remettre en question, de nuancer"
+    ]
+  },
+
+  "ia_en_afrique": {
+    "contexte": "L'Afrique représente 17% de la population mondiale mais produit moins de 1% des données IA globales. C'est à la fois un défi et une immense opportunité.",
+    "opportunites_cles": [
+      { "domaine": "Agriculture", "impact": "IA pour la prévision météo, détection de maladies des cultures, optimisation des récoltes — crucial pour 60% des Africains qui vivent de l'agriculture" },
+      { "domaine": "Santé", "impact": "Diagnostic médical par IA dans les zones sans médecins, détection précoce du paludisme et tuberculose, télémédecine" },
+      { "domaine": "Éducation", "impact": "Tuteurs IA adaptés aux langues locales africaines, apprentissage personnalisé, accès à l'éducation dans les zones rurales" },
+      { "domaine": "Langues africaines", "impact": "Préservation et digitalisation de plus de 2000 langues africaines, traduction automatique" },
+      { "domaine": "Finance", "impact": "Inclusion financière via fintech IA pour les 400M d'Africains sans compte bancaire" },
+      { "domaine": "Eau et énergie", "impact": "Optimisation de la distribution d'eau potable et d'énergie solaire" },
+      { "domaine": "Sécurité alimentaire", "impact": "Prévision des famines, optimisation de la chaîne de distribution alimentaire" }
+    ],
+    "defis": [
+      "Accès limité à Internet haut débit (moins de 30% de pénétration en Afrique subsaharienne)",
+      "Manque de données locales annotées pour entraîner des modèles IA pertinents",
+      "Coût des infrastructures cloud et de calcul",
+      "Fuite des cerveaux — les talents IA africains partent souvent à l'étranger",
+      "Biais algorithmiques dans les modèles entraînés sans données africaines"
+    ],
+    "initiatives_africaines_inspirantes": [
+      { "nom": "Deep Learning Indaba", "description": "Conférence annuelle ML en Afrique, renforce la communauté IA africaine" },
+      { "nom": "Masakhane", "description": "Recherche NLP centrée sur les 2000+ langues africaines" },
+      { "nom": "AI4D Africa", "description": "IA pour le développement durable en Afrique" },
+      { "nom": "Data Science Africa", "description": "Formation en data science adaptée au contexte africain" },
+      { "nom": "InstaDeep (Tunisie)", "description": "Startup IA africaine rachetée par BioNTech pour 682M$ — preuve que l'Afrique peut exceller en IA" },
+      { "nom": "CIAT (Tchad)", "description": "Notre communauté ! Première communauté IA structurée au Tchad 🇹🇩" }
+    ],
+    "tchad_et_ia": {
+      "potentiel": "Le Tchad dispose d'un potentiel unique : données agricoles non exploitées, langues documentables, jeunesse numérique croissante",
+      "role_ciat": "La CIAT est le premier pont entre l'écosystème IA mondial et la réalité tchadienne",
+      "objectif_2030": "Faire du Tchad un acteur reconnu de l'IA africaine d'ici 2030"
+    }
+  },
+
+  "capacites_nia": {
+    "ce_que_nia_peut_faire": [
+      "Répondre sur n'importe quel sujet : sciences, histoire, culture, actualités, philosophie, sport...",
+      "Aider à coder en Python, JavaScript, HTML/CSS, SQL, et autres langages",
+      "Expliquer des concepts IA/ML : machine learning, deep learning, NLP, vision par ordinateur",
+      "Rédiger : emails, CV, lettres de motivation, articles, discours, présentations",
+      "Analyser et résumer des textes, documents, rapports",
+      "Aider à résoudre des problèmes mathématiques et logiques",
+      "Donner des conseils sur des projets, startups, stratégies",
+      "Traduire entre français, anglais, arabe",
+      "Débattre et explorer des idées sous différents angles",
+      "Enseigner et expliquer avec patience et pédagogie"
+    ],
+    "limites_honnetes": [
+      "NIA ne peut pas accéder à Internet en temps réel (ses connaissances ont une date limite)",
+      "NIA ne peut pas voir des images ou fichiers (texte uniquement)",
+      "NIA ne donne pas de conseils médicaux, juridiques ou financiers professionnels",
+      "Pour les questions très récentes, elle recommande de vérifier des sources actuelles"
+    ]
+  }
+}
