@@ -1,6 +1,7 @@
 {
   "name": "ciat-website",
   "version": "1.0.0",
+  "type": "module",
   "description": "CIAT - Communauté d'Intelligence Artificielle au Tchad",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -8,6 +9,13 @@
     "server": "npm run dev --prefix server",
     "build": "npm run build --prefix client",
     "install:all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^9.7.2"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
