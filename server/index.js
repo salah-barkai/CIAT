@@ -19,12 +19,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 loadEnv({ path: join(__dirname, '.env') });
 
 /* ── Connexion MongoDB ── */
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ MongoDB connecté'))
-  .catch(err => console.error('❌ MongoDB erreur:', err.message));
-
-mongoose.connection.on('error', err => console.error('⚠️  MongoDB erreur réseau:', err.message));
-mongoose.connection.on('disconnected', () => console.warn('⚠️  MongoDB déconnecté — tentative de reconnexion...'));
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log('✅ MongoDB connecté'))
+    .catch(err => console.error('❌ MongoDB erreur:', err.message));
+  mongoose.connection.on('error', err => console.error('⚠️  MongoDB erreur réseau:', err.message));
+  mongoose.connection.on('disconnected', () => console.warn('⚠️  MongoDB déconnecté'));
+} else {
+  console.warn('⚠️  MONGODB_URI non définie — base de données désactivée (mode JSON seul)');
+}
 
 import Contact from './models/Contact.js';
 import Member from './models/Member.js';
@@ -36,10 +39,15 @@ const PORT = process.env.PORT || 3001;
 
 /* ── Vérification clé API au démarrage ── */
 if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === 'METS_TA_CLE_ICI') {
-  console.error('\n❌ ANTHROPIC_API_KEY manquante dans server/.env');
-  console.error('   → Va sur https://console.anthropic.com → API Keys → Create Key');
-  console.error('   → Colle la clé dans server/.env\n');
-  process.exit(1);
+  if (process.env.VERCEL) {
+    console.warn('⚠️  ANTHROPIC_API_KEY manquante sur Vercel — NIA fonctionnera en mode JSON uniquement');
+    console.warn('   → Ajoute ANTHROPIC_API_KEY dans Vercel Dashboard > Settings > Environment Variables');
+  } else {
+    console.error('\n❌ ANTHROPIC_API_KEY manquante dans server/.env');
+    console.error('   → Va sur https://console.anthropic.com → API Keys → Create Key');
+    console.error('   → Colle la clé dans server/.env\n');
+    process.exit(1);
+  }
 }
 
 /* ── Chargement des données CIAT ── */
@@ -55,7 +63,9 @@ try {
   console.warn('⚠️  ciat-knowledge.json introuvable, NIA fonctionnera sans données CIAT');
 }
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const client = (process.env.ANTHROPIC_API_KEY && process.env.ANTHROPIC_API_KEY !== 'METS_TA_CLE_ICI')
+  ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+  : null;
 
 /* ── Prompt NIA — MongoDB + JSON simultanément ── */
 let promptCache = null;
@@ -359,6 +369,7 @@ app.post('/api/chat', async (req, res) => {
   const send = (data) => res.write(`data: ${JSON.stringify(data)}\n\n`);
 
   try {
+    if (!client) throw new Error('ANTHROPIC_API_KEY non configurée');
     const systemPrompt = await getSystemPrompt();
     const stream = client.messages.stream({
       model: 'claude-sonnet-4-6',
