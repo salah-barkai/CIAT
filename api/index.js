@@ -403,32 +403,33 @@ app.get('/api/contact', async (_req, res) => {
 
 /* ── GET /api/members ── */
 app.get('/api/members', async (_req, res) => {
+  /* Mapping nom → fichier photo dans /public/members/ */
+  const photoMap = {
+    'Kally':   '/members/kally.jpeg',
+    'Abbas':   '/members/abbas.png',
+    'Brenda':  '/members/brenda.jpeg',
+    'FAT-HI':  '/members/fatih.jpeg',
+    'Séverin': '/members/severin.png',
+    'Tahir':   '/members/tahir.jpeg',
+  };
+  const memberFallback = () => (knowledge.bureau_executif ?? []).map((m, i) => {
+    const photoKey = Object.keys(photoMap).find(k => m.nom.includes(k));
+    return {
+      _id:    `json-${i}`,
+      name:   m.nom,
+      role:   { fr: m.poste,     en: m.poste },
+      bio:    { fr: m.role_ciat, en: m.role_ciat },
+      photo:  photoKey ? photoMap[photoKey] : null,
+      active: true,
+      order:  i,
+    };
+  });
   try {
     const members = await Member.find({ active: true }).sort({ order: 1 });
     if (members.length > 0) return res.json(members);
-    /* Fallback JSON quand MongoDB est vide */
-    const fallback = (knowledge.bureau_executif ?? []).map((m, i) => ({
-      _id: `json-${i}`,
-      name: m.nom,
-      role: { fr: m.poste, en: m.poste },
-      bio:  { fr: m.role_ciat, en: m.role_ciat },
-      photo: null,
-      active: true,
-      order: i,
-    }));
-    res.json(fallback);
+    res.json(memberFallback());
   } catch {
-    /* MongoDB indisponible — retourne JSON directement */
-    const fallback = (knowledge.bureau_executif ?? []).map((m, i) => ({
-      _id: `json-${i}`,
-      name: m.nom,
-      role: { fr: m.poste, en: m.poste },
-      bio:  { fr: m.role_ciat, en: m.role_ciat },
-      photo: null,
-      active: true,
-      order: i,
-    }));
-    res.json(fallback);
+    res.json(memberFallback());
   }
 });
 
