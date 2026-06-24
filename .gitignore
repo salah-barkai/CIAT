@@ -1,16 +1,17 @@
 # Dépendances
 node_modules/
-client/node_modules/
+api/node_modules/
 server/node_modules/
 
 # Variables d'environnement — NE JAMAIS COMMITTER
+api/.env
 server/.env
 .env
 *.env
 
 # Build
+dist/
 client/dist/
-client/build/
 
 # Logs
 *.log
