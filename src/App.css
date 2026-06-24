@@ -130,7 +130,7 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.2s;
 }
 .header__nav-chat:hover { background: rgba(99,102,241,0.2); }
-.header__actions { display: flex; align-items: center; gap: 12px; }
+.header__actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
 .header__lang {
   display: flex; align-items: center; gap: 4px;
   font-size: 0.85rem; font-weight: 600; color: var(--text-dim);
@@ -832,12 +832,12 @@ a { text-decoration: none; color: inherit; }
 }
 .chatbot__header-info { display: flex; align-items: center; gap: 12px; }
 .chatbot__avatar {
-  width: 36px; height: 36px; border-radius: 10px;
+  width: 30px; height: 30px; border-radius: 8px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   display: flex; align-items: center; justify-content: center;
   color: white; flex-shrink: 0;
 }
-.chatbot__avatar-text { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.02em; }
+.chatbot__avatar-text { font-size: 0.58rem; font-weight: 800; letter-spacing: 0.02em; }
 .chatbot__title { font-size: 0.95rem; font-weight: 700; }
 .chatbot__status { display: flex; align-items: center; gap: 5px; margin-top: 1px; }
 .chatbot__status-dot {
@@ -1052,8 +1052,14 @@ a { text-decoration: none; color: inherit; }
   .chatbot__fab { bottom: 20px; right: 16px; width: 52px; height: 52px; }
 }
 
-/* ── Chatbot widget ── */
+/* ── Chatbot widget — bottom sheet sur mobile ── */
 @media (max-width: 480px) {
-  .chatbot { right: 12px; bottom: 84px; width: calc(100vw - 24px); }
+  .chatbot {
+    right: 0; left: 0; bottom: 0;
+    width: 100%; max-width: 100%;
+    border-radius: 20px 20px 0 0;
+    height: calc(100dvh - 68px);
+    max-height: calc(100dvh - 68px);
+  }
   .chatbot__suggestions-grid { grid-template-columns: 1fr; }
 }

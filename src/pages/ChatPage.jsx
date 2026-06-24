@@ -45,7 +45,7 @@ export default function ChatPage() {
   });
   const [activeId, setActiveId] = useState(null);
   const [input, setInput] = useState('');
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => window.innerWidth > 768);
   const { messages, setMessages, isLoading, sendMessage } = useChat([]);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
@@ -73,7 +73,11 @@ export default function ChatPage() {
 
   const loadConversation = (id) => {
     const conv = conversations.find(c => c.id === id);
-    if (conv) { setActiveId(id); setMessages(conv.messages); }
+    if (conv) {
+      setActiveId(id);
+      setMessages(conv.messages);
+      if (window.innerWidth <= 768) setSidebarOpen(false);
+    }
   };
 
   const deleteConversation = (e, id) => {
@@ -118,6 +122,11 @@ export default function ChatPage() {
 
   return (
     <div className="nia-app">
+
+      {/* Overlay mobile — ferme la sidebar en cliquant dehors */}
+      {sidebarOpen && (
+        <div className="nia-overlay" onClick={() => setSidebarOpen(false)} />
+      )}
 
       {/* ── Sidebar ── */}
       <aside className={`nia-sidebar ${sidebarOpen ? 'nia-sidebar--open' : ''}`}>
