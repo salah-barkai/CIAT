@@ -504,12 +504,8 @@ app.get('/api/health', async (_req, res) => {
   });
 });
 
-/* ── Sur Vercel : Express sert aussi le frontend React ── */
-if (process.env.VERCEL) {
-  const clientDist = join(process.cwd(), 'client', 'dist');
-  app.use(express.static(clientDist));
-  app.get('*', (_req, res) => res.sendFile(join(clientDist, 'index.html')));
-}
+/* Sur Vercel, le frontend est servi par le CDN Vercel (via @vercel/static-build).
+   Express gère uniquement les routes /api/*. */
 
 /* ── Export pour Vercel serverless ── */
 export default app;

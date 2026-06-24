@@ -1,16 +1,23 @@
 {
   "version": 2,
-  "installCommand": "npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client",
+  "installCommand": "npm install && npm install --prefix client && npm install --prefix server",
   "builds": [
     {
       "src": "index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["server/**", "client/dist/**"]
+        "includeFiles": ["server/**"]
       }
+    },
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.js" }
+    { "src": "/api/(.*)", "dest": "/index.js" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
