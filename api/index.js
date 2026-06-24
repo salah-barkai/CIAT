@@ -405,20 +405,52 @@ app.get('/api/contact', async (_req, res) => {
 app.get('/api/members', async (_req, res) => {
   try {
     const members = await Member.find({ active: true }).sort({ order: 1 });
-    res.json(members);
-  } catch (err) {
-    res.status(500).json({ error: 'Erreur serveur' });
+    if (members.length > 0) return res.json(members);
+    /* Fallback JSON quand MongoDB est vide */
+    const fallback = (knowledge.bureau_executif ?? []).map((m, i) => ({
+      _id: `json-${i}`,
+      name: m.nom,
+      role: { fr: m.poste, en: m.poste },
+      bio:  { fr: m.role_ciat, en: m.role_ciat },
+      photo: null,
+      active: true,
+      order: i,
+    }));
+    res.json(fallback);
+  } catch {
+    /* MongoDB indisponible — retourne JSON directement */
+    const fallback = (knowledge.bureau_executif ?? []).map((m, i) => ({
+      _id: `json-${i}`,
+      name: m.nom,
+      role: { fr: m.poste, en: m.poste },
+      bio:  { fr: m.role_ciat, en: m.role_ciat },
+      photo: null,
+      active: true,
+      order: i,
+    }));
+    res.json(fallback);
   }
 });
 
 /* ── GET /api/events ── */
 app.get('/api/events', async (req, res) => {
+  const jsonFallback = () => (knowledge.evenements?.a_venir ?? []).map((e, i) => ({
+    _id: `json-${i}`,
+    title:    { fr: e.titre,   en: e.titre },
+    desc:     { fr: e.public_cible ? `Public : ${e.public_cible}` : '', en: '' },
+    date:     { fr: e.date,    en: e.date },
+    tag:      { fr: e.type,    en: e.type },
+    location: e.lieu,
+    status:   'upcoming',
+    order:    i,
+  }));
   try {
     const filter = req.query.status ? { status: req.query.status } : { status: 'upcoming' };
     const events = await Event.find(filter).sort({ order: 1 });
-    res.json(events);
-  } catch (err) {
-    res.status(500).json({ error: 'Erreur serveur' });
+    if (events.length > 0) return res.json(events);
+    res.json(jsonFallback());
+  } catch {
+    res.json(jsonFallback());
   }
 });
 
