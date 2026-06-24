@@ -2,7 +2,8 @@
   "name": "ciat-website",
   "version": "1.0.0",
   "description": "CIAT - Communauté d'Intelligence Artificielle au Tchad",
-  "main": "api/index.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "npm run dev --prefix client",
