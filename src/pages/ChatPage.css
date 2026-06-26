@@ -2,7 +2,7 @@
 .nia-app {
   display: flex;
   height: 100vh;
-  background: #0a0a0f;
+  background: #07101e;
   color: #f1f5f9;
   font-family: 'Inter', system-ui, sans-serif;
   overflow: hidden;
@@ -12,7 +12,7 @@
 .nia-sidebar {
   width: 0;
   flex-shrink: 0;
-  background: #111118;
+  background: #0b1628;
   border-right: 1px solid rgba(255,255,255,0.07);
   display: flex;
   flex-direction: column;
@@ -47,12 +47,12 @@
 .nia-new-chat {
   display: flex; align-items: center; gap: 10px;
   width: 100%; padding: 10px 14px; border-radius: 10px;
-  background: rgba(99,102,241,0.12); color: #818cf8;
+  background: rgba(26,111,212,0.12); color: #4d96e0;
   font-size: 0.88rem; font-weight: 600; font-family: inherit;
-  border: 1px solid rgba(99,102,241,0.2);
+  border: 1px solid rgba(26,111,212,0.2);
   transition: all 0.2s; cursor: pointer;
 }
-.nia-new-chat:hover { background: rgba(99,102,241,0.2); }
+.nia-new-chat:hover { background: rgba(26,111,212,0.2); }
 
 .nia-sidebar__history {
   flex: 1; overflow-y: auto; padding: 8px 8px;
@@ -70,7 +70,7 @@
   position: relative; border: none; background: none;
 }
 .nia-conv-item:hover { background: rgba(255,255,255,0.05); color: #f1f5f9; }
-.nia-conv-item--active { background: rgba(99,102,241,0.12); color: #f1f5f9; }
+.nia-conv-item--active { background: rgba(26,111,212,0.12); color: #f1f5f9; }
 .nia-conv-icon { flex-shrink: 0; opacity: 0.5; }
 .nia-conv-title { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .nia-conv-delete {
@@ -108,8 +108,8 @@
 }
 .nia-topbar__toggle:hover { background: rgba(255,255,255,0.06); color: #f1f5f9; }
 .nia-topbar__brand { display: flex; align-items: center; gap: 8px; flex: 1; }
-.nia-topbar__logo { height: 28px; width: auto; }
-.nia-topbar__name { font-size: 1.1rem; font-weight: 800; color: #818cf8; }
+.nia-topbar__logo { height: 28px; width: auto; border-radius: 6px; filter: drop-shadow(0 0 5px rgba(0,194,232,0.4)); }
+.nia-topbar__name { font-size: 1.1rem; font-weight: 800; color: #4d96e0; }
 .nia-topbar__tag {
   font-size: 0.72rem; font-weight: 600; color: #475569;
   background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 100px;
@@ -137,13 +137,14 @@
   margin: 0 auto; width: 100%;
 }
 .nia-welcome__avatar {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(6,182,212,0.2));
-  border: 2px solid rgba(99,102,241,0.3);
+  width: 72px; height: 72px; border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(0,194,232,0.3);
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px; overflow: hidden; padding: 8px;
+  margin-bottom: 20px; overflow: hidden; padding: 6px;
+  box-shadow: 0 0 18px rgba(0,194,232,0.2);
 }
-.nia-welcome__avatar img { width: 100%; height: 100%; object-fit: contain; }
+.nia-welcome__avatar img { width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
 .nia-welcome__title {
   font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 8px;
 }
@@ -158,11 +159,11 @@
 .nia-starter {
   display: flex; align-items: center; gap: 14px;
   padding: 14px 16px; border-radius: 14px; text-align: left;
-  background: #16161f; border: 1px solid rgba(255,255,255,0.08);
+  background: #0d1c32; border: 1px solid rgba(255,255,255,0.08);
   font-family: inherit; cursor: pointer; transition: all 0.2s;
 }
 .nia-starter:hover {
-  background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.3);
+  background: rgba(26,111,212,0.1); border-color: rgba(26,111,212,0.3);
   transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 .nia-starter__icon { font-size: 1.5rem; flex-shrink: 0; }
@@ -179,24 +180,25 @@
 .nia-msg--user { flex-direction: row-reverse; }
 
 .nia-msg__avatar {
-  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
-  background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(6,182,212,0.15));
-  border: 1px solid rgba(99,102,241,0.2);
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,194,232,0.25);
   display: flex; align-items: center; justify-content: center;
-  padding: 6px; overflow: hidden;
+  padding: 4px; overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,194,232,0.15);
 }
-.nia-msg__avatar img { width: 100%; height: 100%; object-fit: contain; }
+.nia-msg__avatar img { width: 100%; height: 100%; object-fit: contain; border-radius: 5px; }
 
 .nia-msg__body { flex: 1; min-width: 0; max-width: 85%; }
 .nia-msg--user .nia-msg__body { display: flex; flex-direction: column; align-items: flex-end; }
 
-.nia-msg__name { font-size: 0.78rem; font-weight: 700; color: #818cf8; margin-bottom: 6px; display: block; }
+.nia-msg__name { font-size: 0.78rem; font-weight: 700; color: #4d96e0; margin-bottom: 6px; display: block; }
 
 .nia-msg__bubble {
   font-size: 0.92rem; line-height: 1.7; color: #e2e8f0;
 }
 .nia-msg--user .nia-msg__bubble {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  background: linear-gradient(135deg, #0a2d6e, #1a6fd4);
   color: white; padding: 12px 18px; border-radius: 18px 18px 4px 18px;
   font-size: 0.92rem; line-height: 1.6; max-width: 100%;
 }
@@ -210,11 +212,11 @@
 .nia-md strong { color: #f1f5f9; font-weight: 700; }
 .nia-md em { color: #94a3b8; }
 .nia-md code {
-  background: rgba(99,102,241,0.15); color: #a5b4fc;
+  background: rgba(26,111,212,0.15); color: #a5b4fc;
   padding: 2px 6px; border-radius: 5px; font-size: 0.85em; font-family: monospace;
 }
 .nia-md pre {
-  background: #1e1e2d; border: 1px solid rgba(255,255,255,0.08);
+  background: #122240; border: 1px solid rgba(255,255,255,0.08);
   border-radius: 10px; padding: 16px; margin: 10px 0;
   overflow-x: auto; font-size: 0.85rem; line-height: 1.6;
 }
@@ -224,7 +226,7 @@
 .nia-typing { display: flex; gap: 5px; align-items: center; padding: 8px 0; }
 .nia-typing span {
   width: 8px; height: 8px; border-radius: 50%;
-  background: #6366f1; animation: nia-bounce 1.2s infinite;
+  background: #1a6fd4; animation: nia-bounce 1.2s infinite;
 }
 .nia-typing span:nth-child(2) { animation-delay: 0.2s; }
 .nia-typing span:nth-child(3) { animation-delay: 0.4s; }
@@ -233,19 +235,19 @@
 /* Input area */
 .nia-input-wrap {
   padding: 16px 20px 20px; flex-shrink: 0;
-  background: linear-gradient(to top, #0a0a0f 70%, transparent);
+  background: linear-gradient(to top, #07101e 70%, transparent);
 }
 .nia-input-box {
   max-width: 800px; margin: 0 auto;
   display: flex; align-items: flex-end; gap: 10px;
-  background: #16161f; border: 1px solid rgba(255,255,255,0.1);
+  background: #0d1c32; border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px; padding: 12px 12px 12px 18px;
-  box-shadow: 0 0 0 1px rgba(99,102,241,0.0);
+  box-shadow: 0 0 0 1px rgba(26,111,212,0.0);
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 .nia-input-box:focus-within {
-  border-color: rgba(99,102,241,0.4);
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.08);
+  border-color: rgba(26,111,212,0.4);
+  box-shadow: 0 0 0 3px rgba(26,111,212,0.08);
 }
 .nia-input {
   flex: 1; background: none; border: none; outline: none;
@@ -264,11 +266,11 @@
   color: #475569; transition: all 0.2s; cursor: pointer;
 }
 .nia-send--active {
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background: linear-gradient(135deg, #1a6fd4, #0a2d6e);
   border-color: transparent; color: white;
-  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
+  box-shadow: 0 4px 14px rgba(26,111,212,0.4);
 }
-.nia-send--active:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(99,102,241,0.5); }
+.nia-send--active:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(26,111,212,0.5); }
 
 .nia-send-loading { display: flex; gap: 3px; align-items: center; }
 .nia-send-loading span {
@@ -285,7 +287,7 @@
 
 /* Gradient text (reuse from App.css) */
 .gradient-text {
-  background: linear-gradient(135deg, #818cf8, #06b6d4);
+  background: linear-gradient(135deg, #4d96e0, #00c2e8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

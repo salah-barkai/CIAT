@@ -1,5 +1,5 @@
 import { useLang } from '../context/LanguageContext';
-import ciatLogo from '@logo/CIAT_logo_transparent.png';
+import ciatLogo from '@logo/ciat_logo.jpeg';
 
 const stats = [
   { value: '25', key: 'members' },

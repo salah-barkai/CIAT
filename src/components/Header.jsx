@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '../context/LanguageContext';
-import ciatLogo from '@logo/CIAT_logo_transparent.png';
+import ciatLogo from '@logo/ciat_logo.jpeg';
 
 export default function Header({ onOpenChat }) {
   const { lang, t, toggleLang } = useLang();
