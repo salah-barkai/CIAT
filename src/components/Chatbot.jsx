@@ -112,79 +112,22 @@ export default function Chatbot({ isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Ribbon */}
-        {kbStatus === 'connected' && kbData && (
-          <div className="chatbot__kb-ribbon">
-            <span>📚</span>
-            <span>{lang === 'fr'
-              ? `${kbData.bureau_executif?.length} membres · ${kbData.evenements?.a_venir?.length} événements · ${kbData.projets?.length} projets`
-              : `${kbData.bureau_executif?.length} members · ${kbData.evenements?.a_venir?.length} events · ${kbData.projets?.length} projects`}
-            </span>
+        {/* Coming soon */}
+        <div className="chatbot__coming-soon">
+          <div className="chatbot__soon-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="32" height="32">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
           </div>
-        )}
-
-        {/* Messages */}
-        <div className="chatbot__messages">
-          {messages.map((msg, i) => (
-            <div key={i} className={`chatbot__message chatbot__message--${msg.role}`}>
-              {msg.role === 'assistant' && (
-                <div className="chatbot__message-avatar">NIA</div>
-              )}
-              <div className="chatbot__message-bubble">
-                {msg.content === '' && isLoading && i === messages.length - 1 ? (
-                  <div className="chatbot__typing"><span /><span /><span /></div>
-                ) : (
-                  <MarkdownText text={msg.content} />
-                )}
-              </div>
-            </div>
-          ))}
-
-          {showSuggestions && (
-            <div className="chatbot__suggestions">
-              <p className="chatbot__suggestions-label">
-                {lang === 'fr' ? '💬 Questions fréquentes' : '💬 Frequent questions'}
-              </p>
-              <div className="chatbot__suggestions-grid">
-                {suggestions.map((s, i) => (
-                  <button key={i} className="chatbot__suggestion-chip" onClick={() => handleSend(s.text)}>
-                    <span>{s.icon}</span><span>{s.text}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-
-        {/* Input */}
-        <div className="chatbot__input-area">
-          <textarea
-            ref={inputRef}
-            className="chatbot__input"
-            placeholder={t.chatbot.placeholder}
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            rows={1}
-            disabled={isLoading}
-          />
-          <button
-            className={`chatbot__send ${input.trim() && !isLoading ? 'chatbot__send--active' : ''}`}
-            onClick={() => handleSend()}
-            disabled={!input.trim() || isLoading}
-          >
-            {isLoading ? (
-              <div className="chatbot__typing" style={{padding:0, gap:'3px'}}>
-                <span style={{width:'5px',height:'5px'}}/><span style={{width:'5px',height:'5px'}}/><span style={{width:'5px',height:'5px'}}/>
-              </div>
-            ) : (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-            )}
-          </button>
+          <p className="chatbot__soon-title">
+            {lang === 'fr' ? 'Bientôt disponible' : 'Coming soon'}
+          </p>
+          <p className="chatbot__soon-text">
+            {lang === 'fr'
+              ? 'NIA est en cours de finalisation. Elle sera disponible très prochainement !'
+              : 'NIA is being finalized. She will be available very soon!'}
+          </p>
         </div>
       </div>
     </>
